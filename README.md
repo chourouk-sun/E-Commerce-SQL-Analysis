@@ -95,22 +95,38 @@ The analysis identifies **Customer_45** as the **highest spending customer**, wi
 ## Monthly revenue
 ![Monthly revenue](https://github.com/chourouk-sun/E-Commerce-SQL-Analysis/blob/9eba300ffa50c26062116e1a7fd4ca5a5c9790eb/images/image3.png)
 
--- Monthly revenue--
-SELECT
-    YEAR(order_date) AS year,
-    MONTH(order_date) AS month,
-    SUM(total_amount) AS monthly_revenue
-FROM orders
-GROUP BY YEAR(order_date), MONTH(order_date)
-ORDER BY year, month;
+The analysis presents **monthly revenue trends** across **2024 and 2025**, highlighting how sales evolve over time.
+### Key Observations
+* Revenue shows a **strong increase in early 2025**, starting from **January (10,722.30)** and peaking in **April (16,452.71)**.
+* The **highest monthly revenue** is observed in **April 2025**, indicating a period of strong sales performance.
+* After April, revenue **fluctuates throughout the year**, with noticeable drops in **May** and **September**, followed by partial recoveries.
+* **December 2024** shows relatively low revenue (**2,196.70**), which may indicate:
+  * A partial dataset
+  * A ramp-up phase of the simulated business
+### Business Insights
+* The peak in early 2025 suggests **seasonal demand** or the impact of promotions during that period.
+* Revenue volatility across months highlights the importance of:
+  * Monitoring sales trends
+  * Adjusting inventory and marketing strategies dynamically
+* Identifying high-performing months helps businesses:
+  * Plan campaigns
+  * Forecast revenue
+  * Optimize staffing and supply chains
+
 
 ## Average Order Value 
 ![Average Order Value](https://github.com/chourouk-sun/E-Commerce-SQL-Analysis/blob/9eba300ffa50c26062116e1a7fd4ca5a5c9790eb/images/images4.png)
 
--- Average Order Value (AOV)--
-SELECT
-    AVG(total_amount) AS average_order_value
-FROM orders;
+The analysis shows that the **Average Order Value (AOV)** is **500.30**.
+###  What this means
+* On average, each customer order generates **approximately 500** in revenue.
+* This metric provides a **baseline indicator of customer purchasing behavior** and overall pricing strategy.
+### Business Insights
+* AOV helps businesses:
+  * Evaluate the effectiveness of pricing and bundling strategies
+  * Measure the impact of promotions and upselling techniques
+  * Forecast revenue more accurately
+* Increasing AOV (e.g., through cross-selling or discounts on bundles) can significantly improve total revenue without increasing customer acquisition costs.
 
 
 
